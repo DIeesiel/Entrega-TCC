@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Montserrat Alternates', sans-serif;
+	}
+	body{
+        background-image: url(https://images.pexels.com/photos/390052/church-window-window-church-stained-glass-390052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+		background-size: 100vw 100vh;
+		background-repeat: cover;
+	}
+	.capa{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0,0,0,0.6);
+		z-index: -1;
+		top: 0;left: 0;
+	}
+	.header{
+		width: 100%;
+		height: 100px;
+		position: absolute;
+		top: 0;left: 0;
+		margin-bottom: 25px;
+	}
+	.container{
+		width: 90%;
+		max-width: 1200px;
+		margin-top: 65px;
+		margin-left: 40px;
+	}
+	#btn-sair{
+		float: right;
+		margin-left: 100px;
+		font-size: 20px;
+	}
+	.container .btn-menu, .logo{
+		line-height: 55px;
+		margin-left: 65px;
+		float: left;
+	}
+	.container .btn-menu label{
+		color: #fff;
+		font-size: 40px;
+		cursor: pointer;
+	}
+	.logo h1{
+		color: #fff;
+		font-weight: 400;
+		font-size: 22px;
+		margin-left: 10px;
+	}
+	.container .menu{
+		float: right;
+		line-height: -50px;
+		padding-left: 10px;
+	}
+	.container .menu a{
+		display: inline-block;
+		padding: 10px;
+		line-height: normal;
+		text-decoration: none;
+		color: #fff;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 15px;
+		margin-right: -115px;
+	}
+	.container .menu a:hover{
+		border-bottom: 2px solid #c7c7c7;
+		padding-bottom: 5px;
+	}
+
+	#btn-menu{
+		display: none;
+	}
+	.container-menu{
+		position: absolute;	
+		background: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100vh;
+		top: 0;left: 0;
+		transition: all 500ms ease;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#btn-menu:checked ~ .container-menu{
+		opacity: 1;
+		visibility: visible;
+	}
+	.cont-menu{
+		width: 100%;
+		max-width: 300px;
+		background: #1c1c1c;
+		height: 100vh;
+		position: relative;
+		transition: all 500ms ease;
+		transform: translateX(-100%);
+	}
+	#btn-menu:checked ~ .container-menu .cont-menu{
+		transform: translateX(0%);
+	}
+	.cont-menu nav{
+		transform: translateY(15%);
+	}
+
+	html{
+
+		--body-color:#FFFCFF ;
+	  
+		--header-color:#000000;
+	  
+		--header-button:#f92d2d;
+	  
+		--color-weekdays: #000000;
+		
+		--box-shadow: #CBD4C2;
+	  
+		--hover: #e8faed;
+	  
+		--current-day:#f2c9f7;
+	  
+		--event-color: #d327c2;
+	  
+		--modal-event: #e8f4fa;
+	  
+		--color-day:white;
+		
+	  }
+	  
+	  button {
+		width: 75px;
+		cursor: pointer;
+		box-shadow: 0px 0px 2px gray;
+		border: none;
+		outline: none;
+		padding: 5px;
+		border-radius: 5px;
+		color: white;
+	  }
+
+	.cont-menu nav a{
+		display: block;
+		text-decoration: none;
+		padding: 40px;
+		color: #c7c7c7;
+		border-left: 5px solid transparent;
+		transition: all 400ms ease;
+	}
+	.cont-menu nav a:hover{
+		border-left: 5px solid #c7c7c7;
+		background: #1f1f1f;
+	}
+	.cont-menu label{
+		position: absolute;
+		right: 5px;
+		top: 10px;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+	}
+	main {
+		width: 50%;
+		margin: 50px auto;
+	}
+	.container1 {
+		background-color: #fff;
+		padding: 20px;
+		box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		border-radius: 5px;
+	    width: 135%;
+	    margin-left: -140px;
+		margin-bottom: -40px;
+		margin-top: 100px;
+	}
+	.container2 {
+		background-color: #fff;
+		padding: 20px;
+		box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		border-radius: 5px;
+	    width: 135%;
+	    margin-left: -140px;
+		margin-bottom: 40px;
+		margin-top: 100px;
+	}
+	.container3 {
+		background-color: #fff;
+		padding: 30px;
+		box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		border-radius: 5px;
+	    width: 135%;
+		margin: 40px auto;
+	    margin-left: -100px;
+		margin-bottom: 10px;
+		margin-top: 100px;
+	}
+
+	#calendar {
+		width: 100%;
+		margin-left: -5px;
+		display: flex;
+		flex-wrap: wrap;
+	  }
+	  
+	#header1 {
+		padding: 10px;
+		color: var(--header-color) ;
+		font-size: 26px;
+		font-family: sans-serif;
+		display: flex;
+		justify-content: space-between;
+		margin-right: 20px;
+	  }
+	  #container {
+		width: 105%;
+	  }
+	  #nextButton {
+		background-color:var(--header-button);
+		margin-right: 5px;
+	  }
+	
+	  #backButton {
+		background-color:var(--header-button);
+		margin-right: 5px;
+	  }
+	  #weekdays {
+		width: 100%;
+		display: flex;
+		color: var(--color-weekdays) ;
+		font-weight: bold;
+		align-items: center;
+	  }
+	  #weekdays div {
+		width: 100%;
+		padding: 10px;
+		margin-right: -20px;
+		align-items: center;
+		align-content: center;
+	  }
+	  #newEventModal, #deleteEventModal {
+		display: none;
+		z-index: 20;
+		padding: 25px;
+		background-color: var(--modal-event);
+		box-shadow: 0px 0px 3px black;
+		border-radius: 5px;
+		width: 350px;
+		top: 150px;
+		left: calc(50% - 175px);
+		position: fixed;
+		font-family: sans-serif;
+	  }
+	  #eventTitleInput {
+		padding: 10px;
+		width: 100%;
+		box-sizing: border-box;
+		margin-bottom: 25px;
+		border-radius: 3px;
+		outline: none;
+		border: none;
+		box-shadow: 0px 0px 3px rgb(0, 0, 0);
+	  }
+	  #eventTitleInput.error {
+		border: 2px solid red;
+	  }
+	  #cancelButton, #deleteButton {
+		background-color: var(--header-color);
+	  }
+	  #saveButton, #closeButton {
+		background-color: var(--header-button);
+	  }
+	  #eventText {
+		font-size: 14px;
+	  }
+	  #modalBackDrop {
+		display: none;
+		top: 0px;
+		left: 0px;
+		z-index: 10;
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		background-color: rgba(0,0,0,0.8);
+	  }
+	  .day {
+		width: 118px;
+		padding: 10px;
+		height: 100px;
+		cursor: pointer;
+		box-sizing: border-box;
+		background-color: var(--color-day);
+		margin: 11px;
+		box-shadow: 0px 0px 3px var(--box-shadow);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		border-radius: 15%;
+	  }
+	  .day:hover {
+		background-color: var(--hover);
+	  }
+	  
+	  .day + #currentDay {
+		background-color:var(--current-day);
+	  }
+	  .event {
+		font-size: 10px;
+		padding: 3px;
+		background-color: var(--event-color);
+		color: white;
+		border-radius: 5px;
+		max-height: 55px;
+		overflow: hidden;
+	  }
+	  .padding {
+		cursor: default !important;
+		background-color: var(--body-color) !important;
+		box-shadow: none !important;
+	  }
