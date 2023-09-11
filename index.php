@@ -17,7 +17,6 @@
             <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
 			<label for="senha">Senha</label>
 			<input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
-            <a href="#" id="forgot-pass">Esqueceu sua senha?</a>
 			<input type="submit" value="Login" name="enviado">
 		</form> 
 	 <div id="register-container">
