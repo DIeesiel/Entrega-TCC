@@ -3,15 +3,16 @@ include('conexao.php');
 
 
 $nome = $_POST['nome'];
+$Ende = $_POST['endereco'];
 $Cpf = $_POST['cpf'];
 $tel = $_POST['telefone'];
-$Ende = $_POST['endereco'];
+$val = $_POST['valor'];
 $Cord = $_POST['coordenador'];
 $Cod = $_POST['codigo'];
 
 
-$sql = "INSERT INTO dizimista (nome, cpf, telefone, endereco, coordenador, codigo) 
-        VALUES ('$nome', '$Cpf', '$tel', '$Ende', '$Cord', '$Cod')";
+$sql = "INSERT INTO dizimista (nome, cpf, telefone, valor, endereco, coordenador, codigo) 
+        VALUES ('$nome', '$Cpf', '$tel', '$val', '$Ende', '$Cord', '$Cod')";
 
 $res = mysqli_query($conn, $sql);
 
@@ -22,6 +23,6 @@ if (mysqli_affected_rows($conn) > 0) {
 }
 mysqli_close($conn);
 
-header ("Refresh: 0.5, url=index.php?acao=dizimistas");
+header ("Location: ./menuLateral/index.php?acao=dizimistas");
 
 ?>

@@ -19,11 +19,16 @@ font-weight: bold;
 <div class="container2">
 
 <h1>Cadastro do Dizimista</h1>
-<form method="post" action="importacao2.php">
+<form method="post" action="../importacao2.php">
     <div class="form-group">
       <label for="inputAddress">Nome</label>
-      <input type="text" name="nome" class="form-control" id="inputAddress" placeholder="Jacindo Aberlado">
+      <input type="text" name="nome" class="form-control" id="inputAddress" placeholder="Jacinto Aberlado">
     </div>
+    <div class="form-group">
+      <div class="form-group">
+        <label for="inputCity">Endereço</label>
+        <input type="text" name="endereco" class="form-control" id="inputCity" placeholder="Rua dos Bobos, nº 0">
+      </div>
     <div class="form-row">
       <div class="form-group col-6">
         <label for="inputCPF4">CPF</label>
@@ -36,12 +41,12 @@ font-weight: bold;
     </div>
     <div class="form-row">
       <div class="form-group col-6">
-        <label for="inputCity">Endereço</label>
-        <input type="text" name="endereco" class="form-control" id="inputCity" placeholder="Rua dos Bobos, nº 0">
+        <label for="inputCity">Coordenador</label>
+        <input type="text" name="coordenador" class="form-control" id="inputCity" placeholder="Maria Aparecida">
       </div>
       <div class="form-group col-4">
-        <label for="inputEstado">Coordenador</label>
-        <input type="text" name="coordenador" class="form-control" id="inputCEP" placeholder="Maria Aparecida">
+        <label for="inputEstado">Valor</label>
+        <input type="text" name="valor" class="form-control" id="inputCEP" placeholder="R$">
       </div>
       <div class="form-group col-2">
         <label for="inputCEP">Cod. Dizimo</label>
