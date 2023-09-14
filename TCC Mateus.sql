@@ -8,12 +8,13 @@ CREATE TABLE usuarios (
 
 CREATE TABLE dizimista (
     id_dizimista INT AUTO_INCREMENT PRIMARY KEY NOT NULL UNIQUE,
-    codigo INT UNIQUE NOT NULL,
     nome VARCHAR(50) NOT NULL,
-    coordenador VARCHAR(50) NOT NULL,
+    cpf VARCHAR(15) NOT NULL,
+    telefone VARCHAR(15) NOT NULL,
+    valor VARCHAR(50) NOT NULL,
     endereco VARCHAR(100) NOT NULL,
-    logradouro VARCHAR(50),
-    cpf VARCHAR(15) NOT NULL
+    coordenador VARCHAR(50) NOT NULL,
+    codigo INT UNIQUE NOT NULL
 );
 
 CREATE TABLE dizimo (
@@ -24,6 +25,7 @@ CREATE TABLE dizimo (
     CONSTRAINT pk_dizimista FOREIGN KEY (dizimista)
         REFERENCES dizimista (id_dizimista)
 );
+
 
 insert into dizimista values (null, 2302, 'Luís', 'Sônia', 'Rua do Limoeiro', null, '255.255.255-25');
 
