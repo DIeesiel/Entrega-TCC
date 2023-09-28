@@ -17,10 +17,14 @@ $sql = "INSERT INTO dizimista (nome, cpf, telefone, valor, endereco, coordenador
 $res = mysqli_query($conn, $sql);
 
 if (mysqli_affected_rows($conn) > 0) {
-    echo "<script>
-            alert('Dizimo cadastrado')
-         </script>";
-}
+        echo "<script>
+                alert('Dízimo cadastrado')
+             </script>";
+    } else {
+        echo "<script>
+                alert('Falha ao cadastrar o dízimo')
+             </script>";
+    }
 mysqli_close($conn);
 
 header ("Location: ./menuLateral/index.php?acao=dizimistas");

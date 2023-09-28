@@ -22,35 +22,35 @@ font-weight: bold;
 <form method="post" action="../importacao2.php">
     <div class="form-group">
       <label for="inputAddress">Nome</label>
-      <input type="text" name="nome" class="form-control" id="inputAddress" placeholder="Jacinto Aberlado">
+      <input type="text" name="nome" class="form-control" id="inputAddress" placeholder="Jacinto Aberlado" required>
     </div>
     <div class="form-group">
       <div class="form-group">
         <label for="inputCity">Endereço</label>
-        <input type="text" name="endereco" class="form-control" id="inputCity" placeholder="Rua dos Bobos, nº 0">
+        <input type="text" name="endereco" class="form-control" id="inputCity" placeholder="Rua dos Bobos, nº 0" required>
       </div>
     <div class="form-row">
       <div class="form-group col-6">
         <label for="inputCPF4">CPF</label>
-        <input type="cpf" name="cpf" class="form-control" id="inputEmail4" placeholder="xxx.xxx.xxx-xx" maxlength="14">
+        <input type="cpf" name="cpf" class="form-control" id="inputEmail4" placeholder="xxx.xxx.xxx-xx" maxlength="14" required>
       </div>
       <div class="form-group col-6">
         <label for="inputPassword4">Telefone</label>
-        <input type="text" name="telefone" class="form-control" id="inputPassword4" placeholder="(xx) xxxxx-xxxx">
+        <input type="text" name="telefone" class="form-control" id="inputPassword4" placeholder="(xx) xxxxx-xxxx" required>
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-6">
         <label for="inputCity">Coordenador</label>
-        <input type="text" name="coordenador" class="form-control" id="inputCity" placeholder="Maria Aparecida">
+        <input type="text" name="coordenador" class="form-control" id="inputCity" placeholder="Maria Aparecida" required>
       </div>
       <div class="form-group col-4">
         <label for="inputEstado">Valor</label>
-        <input type="text" name="valor" class="form-control" id="inputCEP" placeholder="R$">
+        <input type="text" name="valor" class="form-control" id="inputCEP" placeholder="R$" required>
       </div>
       <div class="form-group col-2">
         <label for="inputCEP">Cod. Dizimo</label>
-        <input type="text" name="codigo" class="form-control" id="inputCEP" maxlength="4" placeholder="xxxx">
+        <input type="text" name="codigo" class="form-control" id="inputCEP" maxlength="4" placeholder="xxxx" required>
       </div>
     </div>
     <div class="form-group">
