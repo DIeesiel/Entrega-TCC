@@ -18,15 +18,13 @@ $res = mysqli_query($conn, $sql);
 
 if (mysqli_affected_rows($conn) > 0) {
         echo "<script>
-                alert('Dízimo cadastrado')
+                alert('Dízimo Cadastrado')
              </script>";
+             header('Refresh: 0.5;url=./menuLateral/index.php?acao=ofertas');
     } else {
         echo "<script>
                 alert('Falha ao cadastrar o dízimo')
              </script>";
     }
 mysqli_close($conn);
-
-header ("Location: ./menuLateral/index.php?acao=dizimistas");
-
 ?>

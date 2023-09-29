@@ -24,15 +24,14 @@ font-weight: bold;
       <label for="inputAddress">Nome</label>
       <input type="text" name="nome" class="form-control" id="inputAddress" placeholder="Jacinto Aberlado" required>
     </div>
-    <div class="form-group">
       <div class="form-group">
         <label for="inputCity">Endereço</label>
         <input type="text" name="endereco" class="form-control" id="inputCity" placeholder="Rua dos Bobos, nº 0" required>
       </div>
     <div class="form-row">
       <div class="form-group col-6">
-        <label for="inputCPF4">CPF</label>
-        <input type="cpf" name="cpf" class="form-control" id="inputEmail4" placeholder="xxx.xxx.xxx-xx" maxlength="14" required>
+        <label for="inputCPF">CPF</label>
+        <input type="text" name="cpf" class="form-control" id="inputEmail4" placeholder="xxx.xxx.xxx-xx" maxlength="14" required>
       </div>
       <div class="form-group col-6">
         <label for="inputPassword4">Telefone</label>
@@ -52,8 +51,6 @@ font-weight: bold;
         <label for="inputCEP">Cod. Dizimo</label>
         <input type="text" name="codigo" class="form-control" id="inputCEP" maxlength="4" placeholder="xxxx" required>
       </div>
-    </div>
-    <div class="form-group">
     </div>
     <button type="submit" class="btn btn-primary" class="butao">Marcar</button>
   </form>

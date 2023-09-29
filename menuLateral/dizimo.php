@@ -15,46 +15,24 @@
     </tr>
   </thead>
   <tbody>
+  <?php
+include('../conexao.php');
+
+$sql = "SELECT * FROM dizimista";
+$res = mysqli_query($conn, $sql);
+$i = 0;
+while ($dizimista = mysqli_fetch_array($res)) {
+  $i++;
+  ?>
     <tr>
-      <th scope="row">1</th>
-      <td>Joaquim Evaristo</td>
-      <td>Maria</td>
-      <td>555555555</td>
-      <td>555555</td>
-      <td>1234</td>
+      <th scope="row"><?php echo $i; ?></th>
+      <td><?php echo $dizimista['nome']; ?></td>
+      <td><?php echo $dizimista['coordenador']; ?></td>
+      <td><?php echo $dizimista['telefone']; ?></td>
+      <td><?php echo $dizimista['valor']; ?></td>
+      <td><?php echo $dizimista['codigo']; ?></td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Marcos Vieira</td>
-      <td>Felipe</td>
-      <td>777777777</td>
-      <td>777777</td>
-      <td>4567</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td> 
-      <td></td>
-    </tr>
+    <?php } ?>
   </tbody>
 </table>
 </div>
