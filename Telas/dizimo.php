@@ -9,9 +9,9 @@
       <th scope="col"></th>
       <th scope="col">Nome</th>
       <th scope="col">Coordenador</th>
-      <th scope="col">Telefone</th>
-      <th scope="col">Valor</th>
-      <th scope="col">Cod. Dízimo</th>
+      <th scope="col" class="text-center">Telefone</th>
+      <th scope="col" class="text-center">Valor</th>
+      <th scope="col" class="text-center">Cod. Dízimo</th>
       <th></th>
       <th></th>
     </tr>
@@ -44,8 +44,8 @@ while ($dizimista = mysqli_fetch_array($res)) {
       <td><?php echo $dizimista['nome']; ?></td>
       <td><?php echo $dizimista['coordenador']; ?></td>
       <td><?php echo $dizimista['telefone']; ?></td>
-      <td><?php echo $valores; ?></td>
-      <td><?php echo $dizimista['codigo']; ?></td>
+      <td class="text-center"><?php echo $valores; ?></td>
+      <td class="text-center"><?php echo $dizimista['codigo']; ?></td>
       <td><a class="btn btn-primary" href="../ações/update.php?id=<?php echo $dizimista['id_dizimista'];?>">Editar</a></td>
       <td><a class="btn btn-danger" href="../ações/importacao3.php?id=<?php echo $dizimista['id_dizimista']; ?>">Excluir</a></td>
     </tr>
@@ -57,7 +57,7 @@ while ($dizimista = mysqli_fetch_array($res)) {
 
 <!-- Inserir a linha de total após o loop -->
 <tr>
-  <th scope="col" style="font-size: larger;">Total</th>
+  <th scope="col" style="font-size: larger;" class="text-center">Total</th>
   <td scope="col"></td>
   <td scope="col"></td>
   <td scope="col"></td>
