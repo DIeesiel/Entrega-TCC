@@ -1,4 +1,4 @@
-<?php include ('conexao.php');?>
+<?php include ('../ações/conexao.php');?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -7,14 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Maisuma2.0.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="TelaCade.css">
+    <link rel="stylesheet" type="text/css" href="../Estilos/TelaCade.css">
    <title>System PTMS</title>
     </head>
   <body>
     <div class="capa"></div>
     <div id="main-container">
        <h1>Cadastre-se</h1>
-        <form id="register-form" method="post" action="Importacao.php">
+        <form id="register-form" method="post" action="../ações/Importacao.php">
           <div class="full-box">
             <label for="email">E-mail</label>
             <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required> 

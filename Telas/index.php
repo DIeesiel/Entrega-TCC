@@ -9,8 +9,8 @@ if(!isset($_SESSION['id_agente'])) {
 <head>
 	<meta charset="UTF-8">
 	<title>Tela Principal</title>
-	<link rel="stylesheet" href="estilo.css">
-	<link rel="shortcut icon" href="Maisuma2.0.png" type="image/x-icon">
+	<link rel="stylesheet" href="../Estilos/estilo.css">
+	<link rel="shortcut icon" href="../Imagens/Maisuma2.0.png" type="image/x-icon">
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -34,7 +34,7 @@ if (isset($_GET['acao'])) {
     include ('dizimo.php');
   }
   elseif ($acao == 'sair') {
-    include ('../sair.php');
+    include ('../ações/sair.php');
   }
   elseif ($acao == 'registro') {
     include ('registro.php');

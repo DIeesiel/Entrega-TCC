@@ -4,15 +4,15 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="Maisuma2.0.png" type="image/x-icon">
+	<link rel="shortcut icon" href="./Imagens/Maisuma2.0.png" type="image/x-icon">
 	<title>System PTMS</title>
-	<link rel="stylesheet" type="text/css" href="TelaLog.css">
+	<link rel="stylesheet" type="text/css" href="./Estilos/TelaLog.css">
 </head>
 <body>
 	<div class="capa"></div>
 	 <div id="login-container" class="login-box">
 		<h1>Login</h1>
-        <form method="post" action="autentica.php">
+        <form method="post" action="./ações/autentica.php">
 			<label for="email">E-mail</label>
             <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
 			<label for="senha">Senha</label>
@@ -21,7 +21,7 @@
 		</form> 
 	 <div id="register-container">
         <p>Não possui um cadastro?</p>
-        <a href="TelaCade.php">Cadastre-se</a>
+        <a href="./Telas/TelaCade.php">Cadastre-se</a>
 	 </div>
 	</div>
 </body>

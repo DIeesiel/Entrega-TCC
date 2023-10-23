@@ -1,6 +1,6 @@
 <?php
 @session_start();
-include('conexao.php');
+include('./conexao.php');
 
 if (isset($_POST['enviado'])) {
   $verifica1 = $_POST['email'];
@@ -13,7 +13,7 @@ if (isset($_POST['enviado'])) {
   if (mysqli_num_rows($result) > 0 && ($result) < 2) {
       $_SESSION['id_agente'] = 1;
     $_SESSION['nome_agente'] = $usuario['nome'];
-    header('location: menuLateral/index.php ');
+    header('location: ../Telas/index.php ');
     exit();
   } else {  
     echo ("<script>

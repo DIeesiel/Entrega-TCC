@@ -19,7 +19,7 @@ font-weight: bold;
 <div class="container2">
 
 <h1>Cadastro do Dizimista</h1>
-<form method="post" action="../importacao2.php">
+<form method="post" action="../ações/importacao2.php">
     <div class="col-12">
       <label for="inputAddress">Nome</label>
       <input type="text" name="nome" class="form-control" id="inputAddress" placeholder="Jacinto Aberlado" required>
@@ -103,12 +103,11 @@ const maskCurrency = (valor, locale = 'pt-BR', currency = 'BRL') => {
       </div>
       <div class="col-sm-2">
         <label for="inputCEP">Cod. Dizimo</label>
-        <input type="text" name="codigo" class="form-control" id="inputCEP" maxlength="4" placeholder="xxxx" required>
+        <input type="text" name="codigo" class="form-control" id="inputCEP" maxlength="4" minlength="4" placeholder="xxxx" required>
       </div>
     </div>
 </br>
-    <button type="submit" class="btn btn-primary">Marcar</button>
+    <a type="submit" class="btn btn-primary">Marcar</a>
   </form>
 </div>
-
 </main>

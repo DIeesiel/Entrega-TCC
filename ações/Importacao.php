@@ -1,5 +1,5 @@
 <?php
-include('conexao.php');
+include('./conexao.php');
 
 $email = $_POST['email'];
 $nome = $_POST['nome'];
@@ -18,6 +18,6 @@ if (mysqli_affected_rows($conn) > 0) {
 }
 mysqli_close($conn);
 
-header ("Refresh: 0.5, url=index.php");
+header ("Refresh: 0.5, url=../index.php");
 
 ?>
