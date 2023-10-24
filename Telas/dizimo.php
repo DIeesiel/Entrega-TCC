@@ -47,7 +47,7 @@ while ($dizimista = mysqli_fetch_array($res)) {
       <td class="text-center"><?php echo $valores; ?></td>
       <td class="text-center"><?php echo $dizimista['codigo']; ?></td>
       <td><a class="btn btn-primary" href="../ações/update.php?id=<?php echo $dizimista['id_dizimista'];?>">Editar</a></td>
-      <td><a class="btn btn-danger" href="../ações/importacao3.php?id=<?php echo $dizimista['id_dizimista']; ?>">Excluir</a></td>
+      <td><a class="btn btn-danger" href="../ações/deleta.php?id=<?php echo $dizimista['id_dizimista']; ?>">Excluir</a></td>
     </tr>
 <?php } ?>
 

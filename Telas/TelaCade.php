@@ -14,7 +14,7 @@
     <div class="capa"></div>
     <div id="main-container">
        <h1>Cadastre-se</h1>
-        <form id="register-form" method="post" action="../ações/Importacao.php">
+        <form id="register-form" method="post" action="../ações/CadUsuario.php">
           <div class="full-box">
             <label for="email">E-mail</label>
             <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required> 
