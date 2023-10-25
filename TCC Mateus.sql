@@ -9,12 +9,13 @@ CREATE TABLE usuarios (
 CREATE TABLE dizimista (
     id_dizimista INT AUTO_INCREMENT PRIMARY KEY NOT NULL UNIQUE,
     nome VARCHAR(50) NOT NULL,
+	codigo INT UNIQUE NOT NULL,
     cpf VARCHAR(15) NOT NULL,
     telefone VARCHAR(15) NOT NULL,
     valor VARCHAR(50) NOT NULL,
     endereco VARCHAR(100) NOT NULL,
     coordenador VARCHAR(50) NOT NULL,
-    codigo INT UNIQUE NOT NULL
+    dat DATE NOT NULL
 );
 
 CREATE TABLE dizimo (
@@ -26,6 +27,7 @@ CREATE TABLE dizimo (
         REFERENCES dizimista (id_dizimista)
 );
 
+drop table dizimista;
 
 insert into dizimista values (null, 2302, 'Luís', 'Sônia', 'Rua do Limoeiro', null, '255.255.255-25');
 
