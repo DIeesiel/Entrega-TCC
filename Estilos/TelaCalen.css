@@ -60,9 +60,12 @@ main {
   margin-left: 0px;
 }
 
-h1 {
+.titulo {
 	margin-top: 0;
-  color: #e30000;
+  padding: 0;
+  font-weight: bold;
+  box-sizing: border-box;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #calendar {
@@ -116,11 +119,11 @@ html{
   
     --current-day:#f2c9f7;
   
-    --event-color: #d327c2;
+    --event-color: #ffffff;
   
     --modal-event: #e8f4fa;
   
-    --color-day:white;
+    --color-day: #FFFFFF;
     
   }
   
@@ -153,7 +156,8 @@ html{
   #backButton {
     background-color:var(--header-button);
     margin-right: 5px;
-  }
+    font-size: 10px;
+    }
 
   #container {
     width: 105%;
@@ -253,4 +257,4 @@ html{
     height: 100vh;
     position: fixed;
     background-color: rgba(0,0,0,0.8);
-  }  
+  }

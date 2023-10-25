@@ -1,6 +1,10 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+ <?php  include ('./menu.php'); ?>
+
 <main>
 	<div class="container1">
-			<h1>Marque seus compromissos!</h1>
+			<h1 class="titulo">Marque seus compromissos!</h1>
             <div id="container">
                 <div id="header1">
                   <div id="monthDisplay"></div>
@@ -39,7 +43,7 @@
             </div>
           
             <div id="deleteEventModal">
-              <h2>Evento</h2>
+              <h2 style="font-family: 'Arial';">Evento</h2>
           
               <div id="eventText"></div><br>
           

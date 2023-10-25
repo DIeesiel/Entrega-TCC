@@ -1,5 +1,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+<?php include ('./menu.php'); ?>
+
 <main>
 
 <div class="container3">
@@ -8,10 +10,11 @@
     <tr>
       <th scope="col"></th>
       <th scope="col">Nome</th>
-      <th scope="col">Coordenador</th>
+      <th scope="col">Missionário(a)</th>
       <th scope="col" class="text-center">Telefone</th>
       <th scope="col" class="text-center">Valor</th>
-      <th scope="col" class="text-center">Cod. Dízimo</th>
+      <th scope="col" class="text-center">Código</th>
+      <th scope="col" class="text-center">Data</th>
       <th></th>
       <th></th>
     </tr>
@@ -41,11 +44,12 @@ while ($dizimista = mysqli_fetch_array($res)) {
   ?>
     <tr>
       <th scope="row"><?php echo $i; ?></th>
-      <td><?php echo $dizimista['nome']; ?></td>
+      <td class="ellipsis"><?php echo $dizimista['nome']; ?></td>
       <td><?php echo $dizimista['coordenador']; ?></td>
       <td><?php echo $dizimista['telefone']; ?></td>
       <td class="text-center"><?php echo $valores; ?></td>
       <td class="text-center"><?php echo $dizimista['codigo']; ?></td>
+      <td class="text-center"><?php echo $dizimista['dat']; ?></td>
       <td><a class="btn btn-primary" href="../ações/update.php?id=<?php echo $dizimista['id_dizimista'];?>">Editar</a></td>
       <td><a class="btn btn-danger" href="../ações/deleta.php?id=<?php echo $dizimista['id_dizimista']; ?>">Excluir</a></td>
     </tr>
@@ -64,11 +68,13 @@ while ($dizimista = mysqli_fetch_array($res)) {
   <td scope="col"></td>
   <td scope="col"></td>
   <td scope="col"></td>
+  <td scope="col"></td>
   <th scope="col" style="font-size: larger;"><?php echo 'R$ ' . number_format($total, 2, ',', '.'); ?></th>
 </tr>
 </tbody>
 </table>
 <?php  $rota = "../Telas/index.php?acao=dizimistas"?>
-    <button onclick="window.location.href='<?php echo $rota; ?>'" class="btn btn-secondary">Voltar</button>
+    <button onclick="window.location.href='<?php echo $rota; ?>'" class="btn btn-primary" style="padding-left: 5px; font-size: 17px; font-family: 'Arial';">Encerrar</button>
+    <button onclick="window.location.href='<?php echo $rota; ?>'" class="btn btn-secondary" style="font-size: 17px;">Voltar</button>
 </div>
 </main>

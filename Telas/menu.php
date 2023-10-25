@@ -5,7 +5,7 @@
 		</div>
 		</div>
 	</header>
-	<div class="capa"></div>
+	 <div class="capaM"></div>
 
 <input type="checkbox" id="btn-menu">
 <div class="container-menu">

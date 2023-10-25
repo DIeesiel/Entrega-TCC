@@ -68,6 +68,7 @@ function load (){
   //mostrar mês e ano:
   document.getElementById('monthDisplay').innerText = `${date.toLocaleDateString('pt-br',{month: 'long'})}, ${year}`
 
+  monthDisplay.classList.add('largeText');
   
   calendar.innerHTML =''
 

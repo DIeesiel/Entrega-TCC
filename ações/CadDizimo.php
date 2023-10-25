@@ -2,15 +2,17 @@
 include('./conexao.php');
 
 $nome = $_POST['nome'];
+$Cod = $_POST['codigo'];
 $Ende = $_POST['endereco'];
 $Cpf = $_POST['cpf'];
 $tel = $_POST['telefone'];
 $val = $_POST['valor'];
 $Cord = $_POST['coordenador'];
-$Cod = $_POST['codigo'];
+$Dat = $_POST['dat'];
 
-$sql = "INSERT INTO dizimista (nome, cpf, telefone, valor, endereco, coordenador, codigo) 
-        VALUES ('$nome', '$Cpf', '$tel', '$val', '$Ende', '$Cord', '$Cod')";
+
+$sql = "INSERT INTO dizimista (nome, codigo, cpf, telefone, valor, endereco, coordenador, dat) 
+        VALUES ('$nome', '$Cod', '$Cpf', '$tel', '$val', '$Ende', '$Cord', '$Dat')";
 
 $res = mysqli_query($conn, $sql);
 

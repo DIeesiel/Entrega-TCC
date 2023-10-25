@@ -10,14 +10,14 @@
 		background-size: 100vw 100vh;
 		background-repeat: cover;
 	}
-	.capa{
+	.capaM {
 		position: fixed;
 		width: 100%;
 		height: 100vh;
-		background: rgba(0,0,0,0.6);
+		background: rgba(0, 0, 0, 0.4);
 		z-index: -1;
 		top: 0;left: 0;
-	}
+	} 
 	.header{
 		width: 100%;
 		height: 100px;
@@ -25,9 +25,9 @@
 		top: 0;left: 0;
 		margin-bottom: 25px;
 	}
-	.container{
-		width: 90%;
-		max-width: 1200px;
+	 .container{ 
+		width: 100%;
+		max-width: 1100px;
 		margin-top: 65px;
 		margin-left: 40px;
 	}
@@ -38,24 +38,26 @@
 	}
 	.container .btn-menu{
 		line-height: 55px;
-		margin-left: 65px;
 		float: left;
 	}
 	.container .btn-menu label{
 		color: #fff;
-		font-size: 40px;
+		font-size: 44px;
 		cursor: pointer;
+		margin-left: 18px;
 	}
-	.logo h1{
-		color: #fff;
-		font-weight: 400;
-		font-size: 22px;
-		margin-left: 10px;
+	 .titulo { 
+		margin-top: 0;
+		font-size: 35px;
+        padding: 0;
+        font-weight: bold;
+        box-sizing: border-box;
+        font-family: 'Montserrat Alternates', sans-serif;
 	}
 	.container .menu{
 		float: right;
 		line-height: -50px;
-		padding-left: 10px;
+		padding-left: 30px;
 	}
 	.container .menu a{
 		display: inline-block;
@@ -64,7 +66,7 @@
 		text-decoration: none;
 		color: #fff;
 		transition: all 0.3s ease;
-		border-bottom: 2px solid transparent;
+		/* border-bottom: 2px solid transparent; */
 		font-size: 15px;
 		margin-right: -115px;
 	}
@@ -108,7 +110,7 @@
 
 	html{
 
-		--body-color:#FFFCFF ;
+		--body-color:#ffffff ;
 	  
 		--header-color:#000000;
 	  
@@ -171,9 +173,10 @@
 		box-shadow: 0 0 10px rgba(0,0,0,0.2);
 		border-radius: 5px;
 	    width: 135%;
-	    margin-left: -140px;
+	    margin-left: -100px;
 		margin-bottom: -40px;
 		margin-top: 100px;
+		z-index: -1;
 	}
 	.container2 {
 		background-color: #fff;
@@ -181,20 +184,22 @@
 		box-shadow: 0 0 10px rgba(0,0,0,0.2);
 		border-radius: 5px;
 	    width: 135%;
-	    margin-left: -140px;
+	    margin-left: -100px;
 		margin-bottom: 40px;
 		margin-top: 100px;
+		z-index: -1;
 	}
 	.container3 {
 		background-color: #fff;
 		padding: 30px;
 		box-shadow: 0 0 10px rgba(0,0,0,0.2);
 		border-radius: 5px;
-	    width: 135%;
-		margin: 40px auto;
+	    width: 138%;
+		margin: 50px auto;
 	    margin-left: -100px;
 		margin-bottom: 10px;
 		margin-top: 100px;
+		z-index: -1;
 	}
 
 	#calendar {
@@ -207,7 +212,7 @@
 	#header1 {
 		padding: 10px;
 		color: var(--header-color) ;
-		font-size: 26px;
+		font-size: 16px;
 		font-family: sans-serif;
 		display: flex;
 		justify-content: space-between;
@@ -219,11 +224,14 @@
 	  #nextButton {
 		background-color:var(--header-button);
 		margin-right: 5px;
+		border-radius: 8px;
 	  }
 	
 	  #backButton {
 		background-color:var(--header-button);
 		margin-right: 5px;
+		border-radius: 8px;
+
 	  }
 	  #weekdays {
 		width: 100%;
@@ -237,8 +245,8 @@
 		padding: 10px;
 		margin-right: -20px;
 		align-items: center;
-		align-content: center;
 	  }
+
 	  #newEventModal, #deleteEventModal {
 		display: none;
 		z-index: 20;
@@ -250,7 +258,6 @@
 		top: 150px;
 		left: calc(50% - 175px);
 		position: fixed;
-		font-family: sans-serif;
 	  }
 	  #eventTitleInput {
 		padding: 10px;
@@ -267,12 +274,18 @@
 	  }
 	  #cancelButton, #deleteButton {
 		background-color: var(--header-color);
+		border-radius: 5px;
+		font-size: 15px;
 	  }
 	  #saveButton, #closeButton {
 		background-color: var(--header-button);
+		border-radius: 5px;
+		font-size: 15px;
 	  }
 	  #eventText {
-		font-size: 14px;
+		font-size: 18px;
+		font-weight: bold;
+		text-decoration: underline;
 	  }
 	  #modalBackDrop {
 		display: none;
@@ -319,3 +332,23 @@
 		background-color: var(--body-color) !important;
 		box-shadow: none !important;
 	  }
+
+	  #monthDisplay {
+		font-size: 22px;
+	  }
+	  
+	  .ellipsis {
+		max-width: 140px; /* Ajuste o valor desejado em pixels */
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		cursor: pointer;
+		transition: 0s ease;
+	  }
+	  
+	  .ellipsis:hover {
+		white-space: normal;
+		overflow: visible;
+		text-overflow: clip;
+	  }	  
+	  
