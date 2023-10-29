@@ -58,7 +58,7 @@ while ($dizimista = mysqli_fetch_array($res)) {
 <?php } ?>
 
 <div class="input-group" style="justify-content: flex-end;">
-  <input type="text" id="searchInput" style="border-radius: 2px;" placeholder="Pesquise o dizimista">
+  <input type="text" id="searchInput" style="border-radius: 2px;" placeholder="Pesquisa">
   <button id="searchButton" class="btn btn-primary" style="padding-left: 5px; font-size: 17px; font-family: 'Arial'; width: 9%">Pesquisar</button>
 </div>
 
