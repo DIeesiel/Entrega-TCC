@@ -2,9 +2,11 @@
 
 <?php include ('./menu.php'); ?>
 
+
 <main>
 
 <div class="container3">
+
 <table class="table table-hover">
   <thead>
     <tr>
@@ -54,6 +56,46 @@ while ($dizimista = mysqli_fetch_array($res)) {
       <td><a class="btn btn-danger" href="../ações/deleta.php?id=<?php echo $dizimista['id_dizimista']; ?>">Excluir</a></td>
     </tr>
 <?php } ?>
+
+<div class="input-group">
+  <input type="text" id="searchInput" style="border-radius: 2px;" placeholder="Pesquise o dizimista">
+  <button id="searchButton" class="btn btn-primary" style="padding-left: 5px; font-size: 17px; font-family: 'Arial'; width: 9%">Pesquisar</button>
+</div>
+
+
+ <script>
+  
+$(document).ready(function() {
+  $("#searchButton").on("click", function() {
+    search();
+  });
+
+  $("#searchInput").on("input", function() {
+    search();
+  });
+
+  $("#searchInput").on("keydown", function(event) {
+    if (event.key === "Enter") {
+      search();
+    }
+  });
+ 
+
+  function search() {
+    var searchTerm = $("#searchInput").val();
+
+    $("table tbody tr").each(function() {
+      var rowId = $(this).find("td:first").text();
+
+      if (rowId.toLowerCase().includes(searchTerm.toLowerCase())) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  }
+});
+</script>
 
 </br>
 
