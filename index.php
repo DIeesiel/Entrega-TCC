@@ -19,10 +19,6 @@
 			<input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
 			<input type="submit" value="Login" name="enviado">
 		</form> 
-	 <div id="register-container">
-        <p>Não possui um cadastro?</p>
-        <a href="./Telas/TelaCade.php">Cadastre-se</a>
-	 </div>
 	</div>
 </body>
 </html>

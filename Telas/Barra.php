@@ -1,4 +1,4 @@
-<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
 <div class="input-group" style="justify-content: flex-end;">
   <input type="text" id="searchInput" class="barra-de-pesquisa" style="border-radius: 2px;" placeholder="Pesquisa">
