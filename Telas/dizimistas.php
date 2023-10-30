@@ -111,7 +111,7 @@ const maskCurrency = (valor, locale = 'pt-BR', currency = 'BRL') => {
       </div>
     </div>
 </br>
-    <button type="submit" class="btn btn-primary" style="padding-left: 6px">Marcar</button>
+    <button type="submit" class="btn btn-primary" style="padding-left: 3px; width: 9%;">Cadastrar</button>
   </form>
 </div>
 </main>

@@ -52,50 +52,12 @@ while ($dizimista = mysqli_fetch_array($res)) {
       <td class="text-center"><?php echo $valores; ?></td>
       <td class="text-center"><?php echo $dizimista['codigo']; ?></td>
       <td class="text-center"><?php echo $dizimista['dat']; ?></td>
-      <td><a class="btn btn-primary" href="../ações/update.php?id=<?php echo $dizimista['id_dizimista'];?>">Editar</a></td>
+      <td><a class="btn btn-primary">Editar</a></td>
       <td><a class="btn btn-danger" href="../ações/deleta.php?id=<?php echo $dizimista['id_dizimista']; ?>">Excluir</a></td>
     </tr>
 <?php } ?>
 
-<div class="input-group" style="justify-content: flex-end;">
-  <input type="text" id="searchInput" style="border-radius: 2px;" placeholder="Pesquisa">
-  <button id="searchButton" class="btn btn-primary" style="padding-left: 5px; font-size: 17px; font-family: 'Arial'; width: 9%">Pesquisar</button>
-</div>
-
-
- <script>
-  
-$(document).ready(function() {
-  $("#searchButton").on("click", function() {
-    search();
-  });
-
-  $("#searchInput").on("input", function() {
-    search();
-  });
-
-  $("#searchInput").on("keydown", function(event) {
-    if (event.key === "Enter") {
-      search();
-    }
-  });
- 
-
-  function search() {
-    var searchTerm = $("#searchInput").val();
-
-    $("table tbody tr").each(function() {
-      var rowId = $(this).find("td:first").text();
-
-      if (rowId.toLowerCase().includes(searchTerm.toLowerCase())) {
-        $(this).show();
-      } else {
-        $(this).hide();
-      }
-    });
-  }
-});
-</script>
+<?php include ('./Barra.php')?>
 
 </br>
 
@@ -116,7 +78,7 @@ $(document).ready(function() {
 </tbody>
 </table>
 <?php  $rota = "../Telas/index.php?acao=dizimistas"?>
-    <button onclick="window.location.href='<?php echo $rota; ?>'" class="btn btn-primary" style="padding-left: 5px; font-size: 17px; font-family: 'Arial';">Encerrar</button>
+    <button class="btn btn-primary" style="padding-left: 5px; font-size: 17px; font-family: 'Arial';">Finalizar</button>
     <button onclick="window.location.href='<?php echo $rota; ?>'" class="btn btn-secondary" style="font-size: 17px;">Voltar</button>
 </div>
 </main>
