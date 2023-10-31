@@ -13,9 +13,9 @@
 	<div class="cont-menu">
 		<nav>
 			<a href="index.php">Início</a>
-            <a href='index.php?acao=dizimistas'>Dizimistas</a>
-			<a href="index.php?acao=ofertas">Dízimo</a>
-			<a href="index.php?acao=registro">Registro</a>
+            <a href='index.php?acao=dizimistas'>Cadastrar</a>
+			<a href="index.php?acao=ofertas">Registro</a>
+			<a href="index.php?acao=registro">Arquivados</a>
 			<a href="index.php?acao=sair">Sair</a>
 
 		</nav>

@@ -78,7 +78,7 @@ while ($dizimista = mysqli_fetch_array($res)) {
 </tbody>
 </table>
 <?php  $rota = "../Telas/index.php?acao=dizimistas"?>
-    <button class="btn btn-primary" style="padding-left: 5px; font-size: 17px; font-family: 'Arial';">Finalizar</button>
-    <button onclick="window.location.href='<?php echo $rota; ?>'" class="btn btn-secondary" style="font-size: 17px;">Voltar</button>
+    <button class="btn btn-success" style="padding-left: 5px; font-size: 17px; font-family: 'Arial';">Finalizar</button>
+    <button onclick="window.location.href='<?php echo $rota; ?>'" class="btn btn-primary" style="font-size: 17px; padding-left: 4px;">+Novo</button>
 </div>
 </main>

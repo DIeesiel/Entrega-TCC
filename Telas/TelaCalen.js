@@ -37,6 +37,7 @@ function openModal(date){
 //função load() será chamada quando a pagina carregar:
 
 function load (){ 
+  console.log("Value of nav:", nav);
   const date = new Date() 
   
 
@@ -149,18 +150,17 @@ function deleteEvent(){
 
 // botões 
 
-function buttons (){
-  document.getElementById('backButton').addEventListener('click', ()=>{
-    nav--
-    load()
-    
-  })
+function buttons() {
+  document.getElementById('backButton').addEventListener('click', () => {
+    nav--;
+    load();
+  });
 
-  document.getElementById('nextButton').addEventListener('click',()=>{
-    nav++
-    load()
-    
-  })
+  document.getElementById('nextButton').addEventListener('click', () => {
+    nav++;
+    load();
+  });
+
 
   document.getElementById('saveButton').addEventListener('click',()=> saveEvent())
 
