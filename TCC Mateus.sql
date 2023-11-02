@@ -28,10 +28,3 @@ CREATE TABLE dizimo (
 );
 
 drop table dizimista;
-
-insert into dizimista values (null, 2302, 'Luís', 'Sônia', 'Rua do Limoeiro', null, '255.255.255-25');
-
-SELECT 
-    *
-FROM
-    usuarios;
