@@ -2,7 +2,6 @@
 
 <?php include ('./menu.php'); ?>
 
-
 <main>
 
 <div class="container3">
@@ -53,8 +52,27 @@ while ($dizimista = mysqli_fetch_array($res)) {
       <td class="text-center"><?php echo $dizimista['codigo']; ?></td>
       <td class="text-center"><?php echo $dizimista['dat']; ?></td>
       <td><a class="btn btn-primary">Editar</a></td>
-      <td><a class="btn btn-danger" href="../ações/deleta.php?id=<?php echo $dizimista['id_dizimista']; ?>">Excluir</a></td>
+      <td><a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal_<?php echo $dizimista['id_dizimista'];?>">Excluir</a></td>
     </tr>
+
+<div class="modal fade" id="exampleModal_<?php echo $dizimista['id_dizimista'];?>" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="top: 150px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmação</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Deseja realmente excluir o(a) dizimista <?php echo $dizimista['nome']?>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-secondary" data-bs-dismiss="modal">Cancel</a>
+        <a class="btn btn-primary" href="../ações/deleta.php?id=<?php echo $dizimista['id_dizimista']; ?>">Excluir</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <?php } ?>
 
 <?php include ('./Barra.php')?>

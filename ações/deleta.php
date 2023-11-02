@@ -1,5 +1,5 @@
 <?php
-include('../ações/conexao.php');
+include('./conexao.php');
 
 $id_exclusao = $_GET['id'];
 
