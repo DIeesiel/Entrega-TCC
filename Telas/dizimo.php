@@ -51,7 +51,11 @@ while ($dizimista = mysqli_fetch_array($res)) {
       <td class="text-center"><?php echo $valores; ?></td>
       <td class="text-center"><?php echo $dizimista['codigo']; ?></td>
       <td class="text-center"><?php echo $dizimista['dat']; ?></td>
-      <td><a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1_<?php echo $dizimista['id_dizimista'];?>">Editar</a></td>
+      <td><a class="btn btn-primary edit-button" 
+             data-bs-toggle="modal" 
+             data-bs-target="#exampleModal1_<?php echo $dizimista['id_dizimista']; ?>"
+             data-dizimista='<?php echo json_encode($dizimista); ?>'>Editar</a>
+      </td>
       <td><a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal_<?php echo $dizimista['id_dizimista'];?>">Excluir</a></td>
     </tr>
 
@@ -91,7 +95,7 @@ while ($dizimista = mysqli_fetch_array($res)) {
   </style>
    
 <h1>Editar Dizimista</h1>
-<form method="post" action="#">
+<form id="editForm_<?php echo $dizimista['id_dizimista'];?>" method="post" action="#">
   <div class="row g-3">
     <div class="col-10">
       <label for="inputAddress" style="display: block; margin-bottom: 10px; font-weight: bold;">Nome</label>
@@ -186,7 +190,7 @@ const maskCurrency = (valor, locale = 'pt-BR', currency = 'BRL') => {
       </div>
     </div>
 </br>
-    <button type="submit" class="btn btn-primary" style="padding-left: 7px; width: 9%;">Concluir</button>
+<button type="submit" class="btn btn-primary" style="padding-left: 7px; width: 9%;" id="concluir-edicao">Concluir</button>
   </form>
 
       </div>
@@ -196,6 +200,61 @@ const maskCurrency = (valor, locale = 'pt-BR', currency = 'BRL') => {
     </div>
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const editButtons = document.querySelectorAll('.edit-button');
+
+  editButtons.forEach((button) => {
+    button.addEventListener('click', function () {
+      // Obtém os dados do dizimista da linha clicada
+      const dizimistaData = JSON.parse(this.getAttribute('data-dizimista'));
+
+      if (dizimistaData) {
+      // Preenche o formulário com os dados do dizimista
+      const formulario = document.querySelector(`#editForm_${dizimistaData.id_dizimista}`);
+      formulario.nome.value = dizimistaData.nome;
+      formulario.codigo.value = dizimistaData.codigo;
+      formulario.endereco.value = dizimistaData.endereco;
+      formulario.cpf.value = dizimistaData.cpf;
+      formulario.telefone.value = dizimistaData.telefone;
+      formulario.coordenador.value = dizimistaData.coordenador;
+      formulario.valor.value = dizimistaData.valor;
+      formulario.dat.value = dizimistaData.dat;
+
+      // Adicione o ID do dizimista ao formulário para identificação
+      formulario.setAttribute('id_dizimista', dizimistaData.id_dizimista);
+      }
+    });
+  });
+
+  // Manipule o envio do formulário para enviar os dados atualizados
+  const concluirButton = document.getElementById('concluir-edicao');
+  concluirButton.addEventListener('click', function () {
+    // Obtenha o ID do dizimista a ser editado
+    const formulario = document.querySelector('form');
+    const dizimistaId = formulario.getAttribute('id_dizimista');
+
+    // Use JavaScript ou jQuery para enviar os dados do formulário para o servidor
+    // Aqui, você pode usar AJAX para enviar os dados para um arquivo PHP que lida com a edição do dizimista
+
+    // Exemplo usando fetch para enviar os dados para um arquivo PHP:
+    fetch('editar_dizimista.php?id=' + dizimistaId, {
+      method: 'POST',
+      body: new FormData(formulario)
+    })
+      .then(response => response.json())
+      .then(data => {
+        // Manipule a resposta do servidor, se necessário
+      })
+      .catch(error => {
+        console.error('Erro ao enviar dados para o servidor:', error);
+      });
+  });
+});
+
+</script>
+
 
 <?php } ?>
 
