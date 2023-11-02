@@ -67,11 +67,11 @@ while ($dizimista = mysqli_fetch_array($res)) {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Deseja realmente excluir o(a) dizimista <?php echo $dizimista['nome']?>
+        <strong><p class="text-center">Deseja realmente excluir o(a) dizimista <?php echo $dizimista['nome']?>?</p></strong>
       </div>
       <div class="modal-footer">
-        <a class="btn btn-secondary" data-bs-dismiss="modal">Cancel</a>
-        <a class="btn btn-primary" href="../ações/deleta.php?id=<?php echo $dizimista['id_dizimista']; ?>">Excluir</a>
+        <a class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</a>
+        <a class="btn btn-danger" href="../ações/deleta.php?id=<?php echo $dizimista['id_dizimista']; ?>">Excluir</a>
       </div>
     </div>
   </div>
@@ -190,12 +190,12 @@ const maskCurrency = (valor, locale = 'pt-BR', currency = 'BRL') => {
       </div>
     </div>
 </br>
-<button type="submit" class="btn btn-primary" style="padding-left: 7px; width: 9%;" id="concluir-edicao">Concluir</button>
+<button type="submit" class="btn btn-primary" style="text-align: center; font-size: 17px; width: 7%;" id="concluir-edicao">Salvar</button>
   </form>
 
       </div>
       <div class="modal-footer">
-        <a class="btn btn-secondary" data-bs-dismiss="modal">Cancel</a>
+        <a class="btn btn-danger" data-bs-dismiss="modal">Cancelar</a>
       </div>
     </div>
   </div>
