@@ -278,8 +278,11 @@ document.addEventListener('DOMContentLoaded', function () {
 </tr>
 </tbody>
 </table>
-<?php  $rota = "../Telas/index.php?acao=dizimistas"?>
-    <button class="btn btn-success" style="padding-left: 5px; font-size: 17px; font-family: 'Arial';">Finalizar</button>
+<?php  
+   $rota = "../Telas/index.php?acao=dizimistas";
+   $rota2 = "../Telas/index.php?acao=registro";
+?>
+    <button onclick="window.location.href='<?php echo $rota2; ?>'" class="btn btn-success" style="padding-left: 5px; font-size: 17px; font-family: 'Arial';">Finalizar</button>
     <button onclick="window.location.href='<?php echo $rota; ?>'" class="btn btn-primary" style="font-size: 17px; padding-left: 4px;">+Novo</button>
 </div>
 </main>
